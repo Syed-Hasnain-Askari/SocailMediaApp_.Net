@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="EditProfile.aspx" />
     <Content Include="editprofile.css" />
+    <Content Include="images\avatar.png" />
     <Content Include="MainDashBoard.aspx" />
     <Content Include="MainDashBoard.Master" />
     <None Include="Web.Debug.config">

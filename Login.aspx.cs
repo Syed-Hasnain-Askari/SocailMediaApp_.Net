@@ -37,14 +37,15 @@ namespace SocialMediaWebApplication
                 }
                 else
                 {
-                    Response.Write("Invalid Pasword");
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "popup", "passwordfailedalert()", true);
                 }
 
             }
             else
             {
-                Response.Write("Invalid UserName");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "popup", "emailfailedalert()", true);
             }
+
             con.Close();
         }
     }

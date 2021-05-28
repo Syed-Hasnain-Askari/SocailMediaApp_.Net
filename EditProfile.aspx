@@ -5,10 +5,19 @@
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
      <link rel="stylesheet" href="editprofile.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script type="text/javascript">
+          function successalert() {
+              swal({
+                  title: 'Congratulations!',
+                  text: 'Your message has been succesfully sent',
+                  type: 'success'
+              });
+          }
+    </script>
    <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5 img-thumbnail" src="images/avatar.png" />
               <asp:Label ID="lblUsername" runat="server" CssClass="font-weight-bold"></asp:Label><asp:Label CssClass="text-black-50" runat="server" ID="lblUseremail"></asp:Label><span></span></div>
         </div>
         <div class="col-md-5 border-right">

@@ -64,8 +64,10 @@ namespace SocialMediaWebApplication
             }
 
             //===== Execute Query.
+           
             cmd.ExecuteNonQuery();
-
+  
+        
             //===== close the connection.
             con.Close();
             Session.RemoveAll();

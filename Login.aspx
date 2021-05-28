@@ -6,22 +6,39 @@
 <head runat="server">
     <title></title>
      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script type="text/javascript">
+          function passwordfailedalert() {
+              swal({
+                  title: 'Sorry!',
+                  text: 'password is not matched',
+                  icon: "error",
+              });
+          }
+          function emailfailedalert() {
+              swal({
+                  title: 'Sorry!',
+                  text: 'Email is not matched',
+                  icon: "error",
+              });
+          }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="font-sans min-h-screen antialiased bg-gray-900 pt-24 pb-5">
     <div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
-      <h1 class="font-bold text-center text-4xl text-yellow-500">Your<span class="text-blue-500">App</span></h1>
+      <h1 class="font-bold text-center text-4xl text-yellow-500">Pakistan<span class="text-blue-500">Twitter</span></h1>
       
         <div class="flex flex-col bg-white p-10 rounded-lg shadow space-y-6">
           <h1 class="font-bold text-xl text-center">Sign in to your account</h1>
 
           <div class="flex flex-col space-y-1">
-             <asp:TextBox ID="txtEmail" CssClass="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" TextMode="Email" placeholder="Username" runat="server"></asp:TextBox>
+             <asp:TextBox ID="txtEmail" CssClass="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" TextMode="Email" placeholder="Email Address" runat="server"></asp:TextBox>
           </div>
 
           <div class="flex flex-col space-y-1">
-              <asp:TextBox ID="txtPassword" CssClass="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Password" runat="server"></asp:TextBox>
+              <asp:TextBox ID="txtPassword" CssClass="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
           </div>
 
           <div class="relative">

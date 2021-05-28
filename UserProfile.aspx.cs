@@ -60,7 +60,7 @@ namespace SocialMediaWebApplication
         {
             SqlConnection con = new SqlConnection(main);
             con.Open();
-            string query = "select [ Tweets_PakistaniTwitter].Post,[ Tweets_PakistaniTwitter].Username,[ Tweets_PakistaniTwitter].TweetID,[ Tweets_PakistaniTwitter].Datetime  from [ Tweets_PakistaniTwitter] inner join Users_PakistaniTwitter on [ Tweets_PakistaniTwitter].UserID = Users_PakistaniTwitter.UserID where  [ Tweets_PakistaniTwitter].Username='"+Session["New"].ToString()+"'";
+            string query = "select * from [ Tweets_PakistaniTwitter]";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

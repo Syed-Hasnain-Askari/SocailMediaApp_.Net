@@ -1,0 +1,115 @@
+﻿*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  /* max-width: 1300px; */
+    /* margin-left: auto;  */
+    /* margin-right: auto; */
+    /* padding: 0 10px; */
+  background: #000;
+}
+
+/* sidebar */
+
+.sidebar {
+  border-right: 1px solid #303030;
+  flex: 0.2;
+  /* min-width: 250px; */
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidebar__twitterIcon {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar__tweet {
+  background-color: #000;
+  border: none;
+  color: white;
+  font-weight: 900;
+  text-transform: inherit;
+  border-radius: 30px;
+  height: 50px;
+  margin-top: 20px;
+  width: 100%;
+}
+.sidebar__tweet2 {
+    background-color: #000;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 20px;
+    width: 50px;
+    display: none;
+}
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #000;
+}
+
+.sidebarOption:hover {
+  border-radius: 30px;
+  color: #1da1f2;
+  transition: color 100ms ease-out;
+}
+
+.sidebarOption > .icons {
+  padding: 20px;
+}
+.sidebarOption > .icons:hover {
+  fill: #1da1f2;
+  color: #1da1f2;
+}
+
+.sidebarOption > h2 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.sidebarOption--active {
+  color: #1da1f2;
+}
+/* sidebar */
+
+/*Rightsidebar*/
+.listrap {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            cursor: default;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .listrap li {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .listrap strong {
+            margin-left: 10px;
+        }
+
+        .listrap .listrap-toggle {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+        }

@@ -57,11 +57,35 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\icons\bar_chart_white_24dp.svg" />
+    <Content Include="Assets\icons\collections_white_24dp.svg" />
+    <Content Include="Assets\icons\gif_box_white_24dp.svg" />
+    <Content Include="Assets\icons\home_white_24dp.svg" />
+    <Content Include="Assets\icons\insert_emoticon_white_24dp.svg" />
+    <Content Include="Assets\icons\mail_white_24dp.svg" />
+    <Content Include="Assets\icons\more_horiz_white_24dp.svg" />
+    <Content Include="Assets\icons\notifications_none_white_24dp.svg" />
+    <Content Include="Assets\icons\person_white_24dp.svg" />
+    <Content Include="Assets\icons\search_white_24dp.svg" />
+    <Content Include="Assets\icons\tag_white_24dp.svg" />
+    <Content Include="Assets\images\login screen img 2.0.PNG" />
+    <Content Include="Assets\images\twitter-512.png" />
     <Content Include="EditProfile.aspx" />
     <Content Include="editprofile.css" />
     <Content Include="images\avatar.png" />
+    <Content Include="images\image1.png" />
     <Content Include="MainDashBoard.aspx" />
+    <Content Include="maindashboard.css" />
     <Content Include="MainDashBoard.Master" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-Black.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-Bold.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-ExtraBold.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-ExtraLight.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-Light.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-Medium.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-Regular.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-SemiBold.ttf" />
+    <Content Include="Assets\fonts\EncodeSansExpanded-Thin.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,6 +99,7 @@
       <DependentUpon>SocialAppDB.mdf</DependentUpon>
     </Content>
     <Content Include="Login.aspx" />
+    <Content Include="Login_Credentials.txt" />
     <Content Include="Signup.aspx" />
     <Content Include="style.css" />
     <Content Include="UserProfile.aspx" />

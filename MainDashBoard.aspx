@@ -2,11 +2,43 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link rel="stylesheet" href="maindashboard.css"/>
+  
     <div>
          <div class="container-fluid ">
         <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-12">
-              
+                 <!-- sidebar -->
+        <div class="sidebar>
+            <img class="sidebar__twitterIcon" src="Assets/images/twitter-512.png">
+            <div active class="sidebarOption">
+                <img class="icons" src="Assets/icons/home_white_24dp.svg" alt="">
+                <h2>Home</h2>
+            </div>
+            <div class="sidebarOption">
+                <img class="icons" src="Assets/icons/tag_white_24dp.svg" alt="">
+                <h2>Explore</h2>
+            </div>
+            <div class="sidebarOption">
+                <img class="icons" src="Assets/icons/notifications_none_white_24dp.svg" alt="">
+                <h2>Notification</h2>
+            </div>
+            <div class="sidebarOption">
+                <img class="icons" src="Assets/icons/mail_white_24dp.svg" alt="">
+                <h2>Messages</h2>
+            </div>
+            <div class="sidebarOption">
+                <img class="icons" src="Assets/icons/person_white_24dp.svg" alt="">
+                <h2>Profile</h2>
+            </div>
+            <div class="sidebarOption">
+                <img class="icons" src="Assets/icons/more_horiz_white_24dp.svg" alt="">
+                <h2>More</h2>
+            </div>
+            <!-- profile  options -->
+        </div>
+        <!-- sidebar -->
+
             </div>
                
             <div class="col-md-6 gedf-main">
@@ -51,7 +83,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+                                    <img class="rounded-circle" width="45" src="images/image1.png" alt="">
                                 </div>
                                 <div class="ml-2">
                                     <div class="h5 m-0"><%#DataBinder.Eval(Container,"DataItem.Username")%>  </div>
@@ -59,16 +91,7 @@
                                 </div>
                             </div>
                             <div>
-                              <%--  <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                         <asp:LinkButton class="dropdown-item" ID="lnkDelete" runat="server" onclientclick="javascript:return confirm('Are you sure to delete record?')" CommandArgument='<%#Eval("TweetID") %>' CommandName="Delete">Delete</asp:LinkButton>
-                                        <asp:LinkButton runat="server" CssClass="dropdown-item" CommandName="Edit" CommandArgument='<%#Eval("TweetID") %>'>Edit</asp:LinkButton>
-                                        <a class="dropdown-item" href="#">Report</a>
-                                    </div>
-                                </div>--%>
+                           
                             </div>
                         </div>
 
@@ -90,29 +113,36 @@
                 <!-- Post /////-->
            
             </div>
-            <div class="col-md-3">
-                <div class="card gedf-card">
+                 
+            	<div class="col-3">
+				<div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+                        <asp:Repeater ID="Repeater2" runat="server">
+                            <HeaderTemplate>
+                                <h3 class="text-dark font-weight-bold">Users</h3>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                
+               <ul class="listrap">
+       
+            <li class="active">
+                <div class="listrap-toggle">
+                    <span></span>
+                    <img src="images/image1.png" class="rounded-circle img-thumbnail" />
                 </div>
-                <div class="card gedf-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
+                <strong><%#DataBinder.Eval(Container,"DataItem.Username")%></strong>
+            </li>
+        </ul>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                 
                     </div>
+
+				</div>
+				
+			</div>
+  </div>
+            
             </div>
         </div>
-    </div>
-    </div>
 </asp:Content>

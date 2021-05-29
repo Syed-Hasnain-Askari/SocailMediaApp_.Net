@@ -27,10 +27,25 @@
                 </div>
               
                 <div class="row mt-3">
-                      <div class="col-md-12"><label class="labels">Username</label><asp:TextBox runat="server" ID="txtUsername" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-12"><label class="labels">Password</label><asp:TextBox runat="server" ID="txtPassword" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-12"><label class="labels">ConfirmPassword</label><asp:TextBox runat="server" ID="txtConfirmpassword" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-12"><label class="labels">Email Address</label><asp:TextBox runat="server" ID="txtemailaddress" CssClass="form-control"></asp:TextBox></div> 
+                      <div class="col-md-12"><label class="labels">Username</label>
+                          <asp:TextBox runat="server" ID="txtUsername" CssClass="form-control"></asp:TextBox>
+                          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter your Name" CssClass="text-red text-xs italic" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+
+                      </div>
+                    <div class="col-md-12"><label class="labels">Password</label>
+                        <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Enter your password" CssClass="text-red text-xs italic" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="col-md-12"><label class="labels">ConfirmPassword</label>
+                        <asp:TextBox runat="server" ID="txtConfirmpassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter your Confirm password" CssClass="text-red text-xs italic" ControlToValidate="txtConfirmpassword" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password not matched" CssClass="text-red text-xs italic" ControlToValidate="txtConfirmpassword" ControlToCompare="txtPassword" Display="Dynamic"></asp:CompareValidator>
+                    </div>
+                    <div class="col-md-12"><label class="labels">Email Address</label>
+                        <asp:TextBox runat="server" ID="txtemailaddress" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter your Email adddress" CssClass="text-red text-xs italic" ControlToValidate="txtemailaddress" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RequiredFieldValidator>
+
+                    </div> 
                 <div class="mt-5 text-center">
                     <asp:Button CssClass="btn btn-primary profile-button" runat="server" ID="btnSave" Text="Save" OnClick="btnSave_Click" />
                 </div>

@@ -18,6 +18,13 @@ namespace SocialMediaWebApplication
 
         }
 
+        public void RefreshControl()
+        {
+            txtUsername.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtConfirmpassword.Text = string.Empty;
+        }
         protected void btnSignup_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(main);
@@ -29,7 +36,7 @@ namespace SocialMediaWebApplication
             cmd.Parameters.AddWithValue("@Datetime", datetime);
             con.Open();
             cmd.ExecuteNonQuery();
-            Response.Redirect("DashBoard.aspx");
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "popup", "signupalert()", true);
             con.Close();
         }
     }

@@ -21,6 +21,7 @@ namespace SocialMediaWebApplication
             if (Session["New"] != null)
             {
                 GetUserPost();
+                GetUser();
                 SqlConnection con = new SqlConnection(main);
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
@@ -44,7 +45,7 @@ namespace SocialMediaWebApplication
         {
             SqlConnection con = new SqlConnection(main);
             con.Open();
-            string query = "select * from  [dbo].[ Tweets_PakistaniTwitter]";
+            string query = "select * from  [dbo].[ Tweets_PakistaniTwitter]  order by Datetime DESC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -53,6 +54,21 @@ namespace SocialMediaWebApplication
             Repeater1.DataBind();
             con.Close();
             
+
+        }
+        public void GetUser()
+        {
+            SqlConnection con = new SqlConnection(main);
+            con.Open();
+            string query = "select * from  [dbo].[Users_PakistaniTwitter]  order by Datetime DESC";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Repeater2.DataSource = dt;
+            Repeater2.DataBind();
+            con.Close();
+
 
         }
       

@@ -60,7 +60,7 @@ namespace SocialMediaWebApplication
         {
             SqlConnection con = new SqlConnection(main);
             con.Open();
-            string query = "select * from [ Tweets_PakistaniTwitter]";
+            string query = "select * from [ Tweets_PakistaniTwitter]  order by Datetime DESC";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

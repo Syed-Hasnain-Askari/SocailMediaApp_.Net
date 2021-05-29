@@ -10,7 +10,7 @@
         <div class="card">
             <img class="card-img-top" src="https://i.imgur.com/K7A78We.jpg" alt="Card image cap">
             <div class="card-body little-profile text-center">
-                <div class="pro-img"><img src="https://i.imgur.com/8RKXAIV.jpg" alt="user"></div>
+                <div class="pro-img"><img src="images/image1.png" alt="user"></div>
                 <h3 class="m-b-0"><asp:Label runat="server" ID="lblUsername" Visible="false"></asp:Label></h3>
                 <p>Web Designer &amp; Developer</p> 
                 <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded" data-abc="true">Follow</a>
@@ -66,7 +66,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="mr-2">
-                                    <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+                                    <img class="rounded-circle" width="45" src="images/image1.png" alt="">
                                 </div>
                                 <div class="ml-2">
                                     <div class="h5 m-0"><%#DataBinder.Eval(Container,"DataItem.Username")%>  </div>

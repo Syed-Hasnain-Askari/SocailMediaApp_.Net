@@ -35,10 +35,13 @@
 
           <div class="flex flex-col space-y-1">
              <asp:TextBox ID="txtEmail" CssClass="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" TextMode="Email" placeholder="Email Address" runat="server"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Please enter your email" ControlToValidate="txtEmail" CssClass="text-red text-xs italic"></asp:RequiredFieldValidator>
+              <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="Dynamic" ControlToValidate="txtEmail" ErrorMessage="Invalid Email format" CssClass="text-red text-xs italic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
           </div>
 
           <div class="flex flex-col space-y-1">
               <asp:TextBox ID="txtPassword" CssClass="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" TextMode="Password" placeholder="Password" runat="server"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter your password" ControlToValidate="txtPassword" CssClass="text-red text-xs italic"></asp:RequiredFieldValidator>
           </div>
 
           <div class="relative">
@@ -53,7 +56,7 @@
         </div>
 
       <div class="flex justify-center text-gray-500 text-sm">
-        <p>&copy;2021. All right reserved.</p>
+        <a href="Signup.aspx">Create an account.</a>
       </div>
     </div>
      </div>

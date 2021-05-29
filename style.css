@@ -126,9 +126,9 @@
 	border-color: #faf7fd;
 	box-shadow: 0 2px 8px rgba(0,0,0,.05);
 }
-.navbar .divider {
+/*.navbar .divider {
 	background-color: #e9ecef !important;
-}
+}*/
 @media (min-width: 1200px){
 	.form-inline .input-group {
 		width: 350px;
